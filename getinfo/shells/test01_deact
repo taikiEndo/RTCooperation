@@ -1,0 +1,8 @@
+#!/bin/sh
+
+#source ~/.bash_profile
+in=$(cat localhost.txt | grep 'ConsoleIn')
+out=$(cat localhost.txt | grep 'ConsoleOut')
+rtdeact $in $out
+rtdis ${in}:out ${out}:in
+rm localhost.txt

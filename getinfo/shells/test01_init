@@ -1,0 +1,4 @@
+#!/bin/bash
+
+gnome-terminal -e "/usr/share/openrtm-1.1/example/ConsoleInComp"
+gnome-terminal -e "/usr/share/openrtm-1.1/example/ConsoleOutComp"

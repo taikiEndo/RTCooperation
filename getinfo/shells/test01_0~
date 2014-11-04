@@ -1,0 +1,8 @@
+rtfind localhost > localhost.txt
+in=$(cat localhost.txt | grep 'ledcon1')
+out=$(cat localhost.txt | grep 'ledcon0')
+echo $in
+echo $out
+rtcon ${in}:out ${out}:in
+rtact $in $out
+

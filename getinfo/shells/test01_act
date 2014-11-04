@@ -1,0 +1,12 @@
+#!/bin/sh
+
+#source /usr/local/share/rtshell/shell_support
+rtfind localhost > localhost.txt
+in=$(cat localhost.txt | grep 'ConsoleIn')
+out=$(cat localhost.txt | grep 'ConsoleOut')
+echo $in
+echo $out
+rtcon ${in}:out ${out}:in
+rtact $in $out
+#pause
+#rm 10.0.1.22.txt
